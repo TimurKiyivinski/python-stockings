@@ -1,4 +1,4 @@
-import SocketClient as SC
+import stockings
 import pickle
 
 class Data:
@@ -6,7 +6,7 @@ class Data:
         self.message = message
 
 def main():
-    c = SC.SocketClient('localhost', 8080, 4096)
+    c = stockings.SocketClient('localhost', 8080, 4096)
     c.connect()
     while True:
         try:

@@ -1,7 +1,7 @@
-import SocketServer as SS
+import stockings
 
 def main():
-    s = SS.SocketServer(8080, 4096)
+    s = stockings.SocketServer(8080, 4096)
     try:
         s.start()
     except KeyboardInterrupt:
