@@ -2,6 +2,10 @@ python-stockings
 ================
 A simple Python library containing an example socket server and class.
 
+usage
+=====
+Add `stockings` into your development directory and import it with `import stockings`.
+
 demo
 ====
 Run the server.
