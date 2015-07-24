@@ -4,7 +4,7 @@ A simple Python library containing an example socket server and class.
 
 usage
 =====
-Add `stockings` into your development directory and import it with `import stockings`.
+Add `stockings` into your development directory and import it with `import stockings`. View `help(stockings)` for detailed module information.
 
 demo
 ====
