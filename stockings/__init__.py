@@ -116,7 +116,8 @@ class SocketServer:
                                 if action_function == False:
                                     self.broadcast(client, data)
                                 else:
-                                    action_function(data)
+                                    data = action_function(data)
+                                    self.broadcast(client, data)
                         except:
                             client.close()
                             self.connections.remove(client)
