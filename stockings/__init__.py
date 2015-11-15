@@ -93,7 +93,7 @@ class SocketServer:
                     client.close()
                 except:
                     print(sys.exc_info()[0])
-    def start(self):
+    def start(self, action_function = False):
         """
         Starts the SocketServer primary function of receiving and updating
         data received from connected clients.
@@ -114,7 +114,10 @@ class SocketServer:
                         try:
                             data = client.recv(self.buffer_size)
                             if data:
-                                self.broadcast(client, data)
+                                if action_function == False:
+                                    self.broadcast(client, data)
+                                else:
+                                    action_function(data)
                         except:
                             client.close()
                             self.connections.remove(client)
