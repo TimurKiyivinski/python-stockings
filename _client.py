@@ -10,6 +10,7 @@ def lenData(data):
 
 def main():
     c = stockings.SocketClient('localhost', 8080, 4096)
+    c.connect()
     c.start(lenData)
 
 if __name__ == '__main__':

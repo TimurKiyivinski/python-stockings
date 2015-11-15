@@ -42,7 +42,6 @@ class SocketClient:
 
         action_function: Function to pass received data into
         """
-        self.connect()
         while True:
             try:
                 rlist, wlist, xlist = select.select([self.socket], [], [])
